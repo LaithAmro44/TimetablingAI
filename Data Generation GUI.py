@@ -817,8 +817,9 @@ class App(tb.Window):
     def __init__(self):
         super().__init__(themename="minty")
         self.title(ar("dataGenerate - مُولّد بيانات الجدولة"))
-        self.geometry("1200x770")
-        self.minsize(820, 770)
+        self.state("zoomed")      # يخلي النافذة fullscreen عند التشغيل
+        self.minsize(1200, 820)  # يحدد الحد الأدنى 1200x1000
+
 
         style = tb.Style()
         # خطوط عامة
