@@ -833,7 +833,7 @@ class App(tb.Window):
         # ترويسة
         header = tb.Frame(self, padding=10)
         header.pack(fill="x")
-        tb.Label(header, text=ar("🧩 مُولّد بيانات الجدولة (مواد • دكاترة • قاعات)"),
+        tb.Label(header, text=ar("🧩 مُولّد بيانات الجدولة ( ليث عمرو | محمد الشطرات | صهيب الليمون )"),
                  font=HEADING_FONT, anchor="e", justify="right").pack(side="right")
         Separator(self).pack(fill="x", pady=(2, 0))
 
