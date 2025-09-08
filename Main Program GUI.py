@@ -746,7 +746,7 @@ def show_loading_screen(callback):
     _bind_exit_on_close(win)  # <<<<<< مهم
 
     win.title(ar("جاري إنشاء الجدول"))
-    win.geometry("350x140")
+    win.geometry("500x160")
     win.resizable(False, False)
     win.attributes("-topmost", True)
 
@@ -907,9 +907,8 @@ def launch_gui():
     APP_ROOT = app
     _bind_exit_on_close(app)  # <<<<<< مهم
 
-    app.geometry("430x560")
-    app.maxsize(430,560)
-    app.minsize(430,560)
+    app.geometry("600x650")
+    app.resizable(False,False)
 
     style = tb.Style()
     style.configure(".", font=(BASE_FONT_FAMILY, BASE_FONT_SIZE))
@@ -1031,9 +1030,16 @@ def launch_gui():
 
     # تذييل
     footer = tb.Frame(app, padding=8)
-    footer.pack(fill="x")
+    footer.pack(fill="x")   # مهم علشان يظهر الـ Frame وكل اللي جواته
+
     tb.Label(
         footer, text=ar("نظام الجدولة الأكاديمي ©"),
+        font=(BASE_FONT_FAMILY, BASE_FONT_SIZE-1),
+        anchor="center", justify="center"
+    ).pack(fill="x")
+
+    tb.Label(
+        footer, text=ar("ليث عمرو | محمد الشطرات | صهيب الليمون"),
         font=(BASE_FONT_FAMILY, BASE_FONT_SIZE-1),
         anchor="center", justify="center"
     ).pack(fill="x")
